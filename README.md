@@ -14,7 +14,7 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 
 ## Checklist
 
-- [ ] Criar um repositório no GitHub com a estrutura do Gitflow, incluindo pelo menos as branches principais "main" e "develop."
+- [x] Criar um repositório no GitHub com a estrutura do Gitflow, incluindo pelo menos as branches principais "main" e "develop."
 - [ ] Utilizar componentes de um framework CSS, como Bootstrap, Materialize ou outro à sua escolha.
 - [ ] Apresentar as telas com layout responsivo, adaptando-se a diferentes tamanhos de tela, usando um framework CSS ou implementações personalizadas.
 - [ ] Desenvolver o layout da aplicação com componentes, tornando o cabeçalho e o rodapé componentes reutilizáveis.
