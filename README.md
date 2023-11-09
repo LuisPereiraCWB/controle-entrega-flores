@@ -11,6 +11,7 @@ O frontend da aplicação foi desenvolvido com Angular e o backend foi simulado 
 ## Protótipo
 
 <!--https://www.figma.com/file/a1VDbO1aNfZyulQPxT99OE/beleza-em-dia?node-id=3%3A80-->
+https://www.figma.com/file/bNZk8K5OKZHmPGbaekcn3F/Entrega-Flores?type=design&node-id=4-19&mode=design&t=Zu0wW41HyG1mZZL7-0
 
 ## Checklist
 

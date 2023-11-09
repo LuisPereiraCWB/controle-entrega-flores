@@ -1,0 +1,44 @@
+<form>
+  <div class="form-group">
+    <label for="nome">Nome:</label>
+    <input type="text" placeholder="Informe o nome" required />
+  </div>
+  <div class="form-group">
+    <label for="cpf">CPF:</label>
+    <input type="text" placeholder="Informe o cpf" required />
+  </div>
+  <div class="form-group">
+    <label for="endereco">Endereço:</label>
+    <input type="text" placeholder="Informe o endereço" required />
+  </div>
+  <div class="form-group">
+    <label for="telefone">Telefone:</label>
+    <input type="text" placeholder="Informe o telefone" required />
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" value="residecial" checked>
+    <label for="residencial">Residencial</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="tipo" value="celular">
+    <label for="celular">Celular</label>
+  </div>
+  <div class="form-check">
+    <input class="form-check-input" type="radio" name="tipo" value="comercial">
+    <label for="comercial">Comercial</label>
+  </div>
+  <div>
+    <label for="prods">Escolha o produto:</label>
+    <select id="prods" name="prods" size="2" multiple>
+      <option value="rosa">Rosa</option>
+      <option value="violeta">Violeta</option>
+    </select><br><br>
+  </div>
+  <div class="form-group">
+    <label for="obs" class="form-label">Observações</label>
+    <textarea class="form-control" id="obs" name="textarea-obs"></textarea>
+  </div>
+  <input type="submit" value="Salvar">
+</form>
+
+
