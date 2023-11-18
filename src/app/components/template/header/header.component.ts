@@ -8,6 +8,7 @@ import * as M from 'materialize-css';
 })
 export class HeaderComponent {
 
-
+  largura: number = 64;
+  altura: number = 64;  
 
 }
