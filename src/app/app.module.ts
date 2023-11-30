@@ -7,13 +7,15 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './components/template/header/header.component';
 import { FooterComponent } from './components/template/footer/footer.component';
 import { NovaEntregaComponent } from './components/template/nova-entrega/nova-entrega.component';
+import { ListaEntregasComponent } from './lista-entregas/lista-entregas.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     FooterComponent,
-    NovaEntregaComponent
+    NovaEntregaComponent,
+    ListaEntregasComponent
   ],
   imports: [
     BrowserModule,

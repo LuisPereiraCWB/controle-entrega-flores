@@ -17,13 +17,13 @@ https://www.figma.com/file/bNZk8K5OKZHmPGbaekcn3F/Entrega-Flores?type=design&nod
 
 - [x] Criar um repositório no GitHub com a estrutura do Gitflow, incluindo pelo menos as branches principais "main" e "develop."
 - [x] Utilizar componentes de um framework CSS, como Bootstrap, Materialize ou outro à sua escolha.
-- [ ] Apresentar as telas com layout responsivo, adaptando-se a diferentes tamanhos de tela, usando um framework CSS ou implementações personalizadas.
-- [ ] Desenvolver o layout da aplicação com componentes, tornando o cabeçalho e o rodapé componentes reutilizáveis.
-- [ ] Aplicar pelo menos dois tipos de data-binding, como Interpolation, Property Binding, Event Binding, Two-Way Data Binding, 
+- [x] Apresentar as telas com layout responsivo, adaptando-se a diferentes tamanhos de tela, usando um framework CSS ou implementações personalizadas.
+- [x] Desenvolver o layout da aplicação com componentes, tornando o cabeçalho e o rodapé componentes reutilizáveis.
+- [x] Aplicar pelo menos dois tipos de data-binding, como Interpolation, Property Binding, Event Binding, Two-Way Data Binding, 
 - [ ] Empregar variáveis de template e a anotação ViewChild para interagir com elementos do DOM ou componentes diretamente no template ou no código TypeScript do aplicativo.
 - [ ] Estabelecer a passagem de dados entre componentes por meio da hierarquia de componentes, empregando as anotações @Input e @Output.
 - [ ] Transferir dados, por meio de serviços, entre componentes que não estão diretamente relacionados.
-- [ ] Mapear os componentes às rotas no módulo de rotas, criando uma estrutura de navegação eficiente.
+- [x] Mapear os componentes às rotas no módulo de rotas, criando uma estrutura de navegação eficiente.
 - [ ] Permitir a navegação fluida entre as diferentes páginas do aplicativo por meio de links e botões de navegação.
 - [ ] Validar os campos do formulário com expressões regulares (REGEX) e apresentar as mensagens de erro.
 - [ ] Implementar máscaras em campos de formulário, quando necessário, para melhorar a experiência do usuário ao inserir dados.

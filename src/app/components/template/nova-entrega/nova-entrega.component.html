@@ -1,3 +1,4 @@
+<!--app-modal [show]="modal.show" [content]="modal" (closeEvent)="onCloseModal()"></app-modal-->
 <form>
   <div class="form-group">
     <label for="nome">Nome:</label>
@@ -29,10 +30,13 @@
   </div>
   <div>
     <label for="prods">Escolha o produto:</label>
-    <select id="prods" name="prods" size="2" multiple>
-      <option value="rosa">Rosa</option>
-      <option value="violeta">Violeta</option>
-    </select><br><br>
+    <select class="form-control" id="produto">
+      <!--option *ngFor="let produto of produtos">{{ produto.nome }}</option-->
+    </select>
+  </div>
+  <div class="form-group">
+    <label for="quantidade">Telefone:</label>
+    <input type="text" placeholder="Informe a quantidade" required />
   </div>
   <div class="form-group">
     <label for="obs" class="form-label">Observações</label>

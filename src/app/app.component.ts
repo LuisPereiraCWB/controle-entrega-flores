@@ -6,7 +6,7 @@ import { AfterViewInit, Component, ElementRef, ViewChild } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent implements AfterViewInit{
-  @ViewChild('mobile') sideNAv?: ElementRef;
+  @ViewChild('mobile') sideNav?: ElementRef;
   
   title = 'controle-entrega-flores-app';
 
