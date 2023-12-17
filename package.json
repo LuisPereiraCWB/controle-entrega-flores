@@ -4,8 +4,10 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --configuration=production --base-href=/controle-entrega-flores/",
     "watch": "ng build --watch --configuration development",
+    "ghpages": "angular-cli-ghpages --dir=dist/controle-entrega-flores",
+    "deploy": "npm run build & npm run ghpages",
     "test": "ng test",
     "json:server": "json-server --watch db.json",
     "json:server:routes": "json-server --watch db.json --routes routes.json"
@@ -23,6 +25,7 @@
     "@angular/platform-browser-dynamic": "^16.2.0",
     "@angular/router": "^16.2.0",
     "@angular/service-worker": "^16.2.0",
+    "angular-cli-ghpages": "^1.0.7",
     "material-icons": "^1.13.12",
     "materialize-css": "^1.0.0",
     "ngx-mask": "^16.4.2",
