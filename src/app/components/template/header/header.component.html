@@ -1,0 +1,26 @@
+<!-- menu -->
+<div class="navbar-fixed" style="z-index: 1001 !important">
+    <nav>
+      <div class="nav-wrapper light-blue darken-2">
+        <div class="container">
+          <a class="brand-logo" href="#">
+            <img class="my-logo" src="assets/images/logo_transp.png" width= "{{ largura}}" height ="{{ altura }}"/>
+          </a>
+          <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+          </a>
+          <ul class="right hide-on-med-and-down" >
+            <li><a routerLink="/inicio" class="flow-text">Início</a></li>
+            <li><a routerLink="/nova-entrega" class="flow-text">Nova Entrega</a></li>
+            <li><a routerLink="/lista-entrega" class="flow-text">Listar Entregas</a></li>
+          </ul>
+          <ul class="sidenav" id="mobile-demo">
+            <li><a routerLink="/inicio">Início</a></li>
+            <li><a routerLink="/nova-entrega">Nova Entrega</a></li>
+            <li><a routerLink="/lista-entrega">Listar Entregas</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+</div>
+<!-- fim menu -->
