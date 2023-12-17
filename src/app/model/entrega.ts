@@ -1,14 +1,15 @@
 export class Entrega {
-    nome: string;
-    endereco: string;
-    cpf: string;
-    telefone: string;
-    produto: string;
-    quantidade: number;
-    observacao: string;
-    entregue: boolean;
+    id?: number;
 
-    construtor(nome, endereco, cpf, telefone, produto, quantidade, observacao, entregue){
+    constructor(
+      public nome: string,
+      public endereco: string,
+      public cpf: string,
+      public telefone: string,
+      public produto: string,
+      public quantidade: number,
+      public observacao: string,
+      public entregue: boolean){
         this.nome = nome;
         this.endereco = endereco;
         this.cpf = cpf;

@@ -1,48 +1,95 @@
-<!--app-modal [show]="modal.show" [content]="modal" (closeEvent)="onCloseModal()"></app-modal-->
-<form>
-  <div class="form-group">
-    <label for="nome">Nome:</label>
-    <input type="text" placeholder="Informe o nome" required />
+
+<form [formGroup]="novaEntregaForm" (ngSubmit)="onSubmitEntregaForm()" #form="ngForm">
+
+  <div class="form-group flex justify-content-center align-content-center text-align-center">
+    <input type="text"
+    id="nome"
+    placeholder="Nome"
+    formControlName="nome"
+    />
+    <div *ngIf="novaEntregaForm.get('nome')?.hasError('required') && novaEntregaForm.get('nome')?.touched">
+      <p class="error-message">Preencha o nome.</p>
+    </div>
+    <div *ngIf="novaEntregaForm.get('nome').hasError('apenasLetras') && novaEntregaForm.get('nome').touched">
+      <p class="error-message">Somente letras são permitidas no nome.</p>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="cpf">CPF:</label>
-    <input type="text" placeholder="Informe o cpf" required />
+  <!--optei por usar a mascara do tipo string apenas para validar se os dígitos são numéricos e mostrar na tela a validação
+    se o mask fosse to tipo numerico, não permmite escrever na tela os dígitos do tipo string
+  -->
+  <div class="form-group flex justify-content-center align-content-center text-align-center">
+    <input type="text"
+    id="cpf"
+    placeholder="CPF"
+    formControlName="cpf"
+    mask="AAA.AAA.AAA-AA"
+    />
+
+    <div *ngIf="novaEntregaForm.get('cpf')?.hasError('required') && novaEntregaForm.get('cpf')?.touched">
+      <p class="error-message">Preencha o CPF.</p>
+    </div>
+    <div *ngIf="novaEntregaForm.get('cpf').hasError('apenasNumeros') && novaEntregaForm.get('cpf').touched">
+      <p class="error-message">Somente números são permitidas no CPF.</p>
+    </div>
+
   </div>
-  <div class="form-group">
-    <label for="endereco">Endereço:</label>
-    <input type="text" placeholder="Informe o endereço" required />
+  <div class="form-group flex justify-content-center align-content-center text-align-center">
+    <input type="text"
+    placeholder="Endereco"
+    formControlName="endereco"
+    class="validate"
+    />
+    <div *ngIf="novaEntregaForm.get('endereco')?.hasError('required') && novaEntregaForm.get('endereco')?.touched">
+      <p class="error-message">Preencha o Endereco.</p>
+    </div>
   </div>
-  <div class="form-group">
-    <label for="telefone">Telefone:</label>
-    <input type="text" placeholder="Informe o telefone" required />
+  <div class="form-group flex justify-content-center align-content-center text-align-center">
+    <input type="tel"
+    placeholder="Telefone"
+    formControlName="telefone"
+    class="validate"
+    mask="(00) 00000-0000"
+    >
+    <div *ngIf="novaEntregaForm.get('telefone')?.hasError('required') && novaEntregaForm.get('telefone')?.touched">
+      <p class="error-message">Preencha o telefone.</p>
+    </div>
   </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" value="residecial" checked>
-    <label for="residencial">Residencial</label>
+
+  <div class="form-group flex justify-content-center align-content-center text-align-center">
+    <input type="text"
+    placeholder="Produto"
+    formControlName="produto"
+    class="validate"
+    >
+    <div *ngIf="novaEntregaForm.get('produto')?.hasError('required') && novaEntregaForm.get('produto')?.touched">
+      <p class="error-message">Preencha o produto.</p>
+    </div>
   </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="tipo" value="celular">
-    <label for="celular">Celular</label>
+
+  <div class="form-group flex justify-content-center align-content-center text-align-center">
+    <input type="number"
+    placeholder="Quantidade"
+    formControlName="quantidade"
+    class="validate"
+    >
+    <div *ngIf="novaEntregaForm.get('quantidade')?.hasError('required') && novaEntregaForm.get('quantidade')?.touched">
+      <p class="error-message">Preencha a quantidade.</p>
+    </div>
   </div>
-  <div class="form-check">
-    <input class="form-check-input" type="radio" name="tipo" value="comercial">
-    <label for="comercial">Comercial</label>
+
+  <div class="form-group flex justify-content-center align-content-center text-align-center">
+    <input type="text"
+    placeholder="Observações"
+    formControlName="observacao"
+
+    >
   </div>
+
   <div>
-    <label for="prods">Escolha o produto:</label>
-    <select class="form-control" id="produto">
-      <!--option *ngFor="let produto of produtos">{{ produto.nome }}</option-->
-    </select>
+    <button type="submit" [disabled]="!this.novaEntregaForm.valid">Salvar</button>
   </div>
-  <div class="form-group">
-    <label for="quantidade">Telefone:</label>
-    <input type="text" placeholder="Informe a quantidade" required />
-  </div>
-  <div class="form-group">
-    <label for="obs" class="form-label">Observações</label>
-    <textarea class="form-control" id="obs" name="textarea-obs"></textarea>
-  </div>
-  <input type="submit" value="Salvar">
+
 </form>
-
-
+<!--div>Debug: {{ novaEntregaForm.get('nome')?.value | json }} - {{ novaEntregaForm.get('nome')?.status }}</div-->
+<!--div>Debug: {{ novaEntregaForm.get('cpf')?.value | json }} - {{ novaEntregaForm.get('cpf')?.status }}</div-->
+<!--{{ novaEntregaForm.value | json }}-->
