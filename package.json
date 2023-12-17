@@ -4,9 +4,9 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build --configuration=production --base-href=/controle-entrega-flores/",
+    "build": "ng build --configuration=production --base-href=/controle-entrega-flores-app/",
     "watch": "ng build --watch --configuration development",
-    "ghpages": "angular-cli-ghpages --dir=dist/controle-entrega-flores",
+    "ghpages": "angular-cli-ghpages --dir=dist/controle-entrega-flores-app",
     "deploy": "npm run build & npm run ghpages",
     "test": "ng test",
     "json:server": "json-server --watch db.json",

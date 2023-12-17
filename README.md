@@ -38,7 +38,7 @@ https://www.figma.com/file/bNZk8K5OKZHmPGbaekcn3F/Entrega-Flores?type=design&nod
 - [ ] Executar o processo de build da aplicação e realizar o deploy para tornar o aplicativo acessível online.
 
 ## Manual de execução
-<!--
+<
 - Clonar o repositório com `git clone`
 - Fazer checkout no branch `develop` que contém as modificações mais recentes
 - Abrir o projeto no editor Visual Studio Code (VS Code)
@@ -54,4 +54,4 @@ https://www.figma.com/file/bNZk8K5OKZHmPGbaekcn3F/Entrega-Flores?type=design&nod
 - O comando para execução do JSON Server deve ser aplicado no diretório raiz do projeto, ou seja, que contém o arquivo `db.json` e `routes.json`.
   - Por padrão, a aplicação JSON Server executa no endereço `localhost:3000`    
 - Abrir um novo terminal pelo VSCode e então executar o projeto Angular
-  - Comando: `ng s -o`-->
+  - Comando: `ng s -o`>
