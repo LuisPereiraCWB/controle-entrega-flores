@@ -1,0 +1,80 @@
+<div>
+  <h5 *ngIf="entregas$ | async as entregas">Dados do JSON Server</h5>
+  <table class="responsive-table table-container"  *ngIf="entregas$ | async as entregasData;">
+    <ng-container *ngIf="entregasData.length > 0;"></ng-container>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let entrega of entregasData | slice: (p - 1) * itemsPerPage : p * itemsPerPage; let i = index">
+        <td>{{ entrega.id }}</td>
+        <td>{{ entrega.nome | titlecase }}</td>
+        <td>{{ entrega.cpf | cpfFormat }}</td>
+        <td>{{ entrega.produto | uppercase }}</td>
+        <td>{{ entrega.quantidade | unidade:'un' }}</td>
+        <td>{{ formatarTelefone(entrega.telefone) }}</td>
+        <td>{{ entrega.endereco }}</td>
+        <td>{{ entrega.observacao }}</td>
+        <td>
+          <button class="btn waves-effect waves-light" (click)="onEditButtonClick(entrega)">Editar</button>
+        </td>
+        <td>
+          <button class="btn waves-effect waves-light red darken-4" (click)="onDeleteJsonServerButtonClick(i)">Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <mat-paginator
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    [pageSize]="itemsPerPage"
+    (page)="changeItemsPerPage($event)">
+  </mat-paginator>
+</div>
+
+<div>
+  <h5 *ngIf="entregas$ | async as entregas">Dados do local storage</h5>
+  <table class="responsive-table highlight table-container" *ngIf="entregas$ | async as entregasData;">
+    <ng-container *ngIf="entregasData.length > 0;"></ng-container>
+    <thead>
+      <tr>
+        <th>ID</th>
+        <th>Nome</th>
+        <th>CPF</th>
+        <th>Produto</th>
+        <th>Quantidade</th>
+        <th>Telefone</th>
+        <th>Endereço</th>
+        <th>Observação</th>
+      </tr>
+    </thead>
+
+    <tbody>
+      <tr *ngFor="let entrega of entregas; let i = index">
+        <td>{{ entrega.id }}</td>
+        <td>{{ entrega.nome | titlecase }}</td>
+        <td>{{ entrega.cpf | cpfFormat }}</td>
+        <td>{{ entrega.produto | uppercase }}</td>
+        <td>{{ entrega.quantidade | unidade:'un' }}</td>
+        <td>{{ formatarTelefone(entrega.telefone) }}</td>
+        <td>{{ entrega.endereco }}</td>
+        <td>{{ entrega.observacao }}</td>
+        <td>
+          <!--button class="btn waves-effect waves-light" (click)="onEditButtonClick(entrega)">Editar</button-->
+        </td>
+        <td>
+          <button class="btn waves-effect waves-light red darken-4" (click)="onDeleteLocalStorageButtonClick(i)"  >Excluir</button>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>
